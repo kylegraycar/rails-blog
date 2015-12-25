@@ -1,10 +1,10 @@
 class ArticlesController < ApplicationController
-  
-  http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
-  
+
+  http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
+
 
   def index
-  	@articles = Article.all
+    @articles = Article.all
   end
 
   def show
@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
   end
 
   def new
-  	@article = Article.new
+    @article = Article.new
   end
 
   def edit
@@ -20,13 +20,13 @@ class ArticlesController < ApplicationController
   end
 
   def create
-  	@article = Article.new(article_params)
+    @article = Article.new(article_params)
 
-  	if @article.save
-  	  redirect_to @article
-  	else
-  	  render 'new'
-  	end
+    if @article.save
+      redirect_to @article
+    else
+      render 'new'
+    end
   end
 
   def update
@@ -45,9 +45,9 @@ class ArticlesController < ApplicationController
    
     redirect_to articles_path
   end
-  
+
   private
     def article_params
-    	params.require(:article) .permit(:title, :text)
+      params.require(:article) .permit(:title, :text)
     end
 end
