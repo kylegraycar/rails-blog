@@ -3,5 +3,7 @@
 This repo serves as an answer key for the "Getting Started with Rails" Rails guide (http://guides.rubyonrails.org/getting_started.html). Reference the coding here with your own!
 
 Ruby 2.2.1
+
 Rails 4.2.5
+
 SQLite3 3.8.10.2
